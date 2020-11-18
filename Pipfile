@@ -11,6 +11,9 @@ flask-sqlalchemy = "*"
 flask-bootstrap = "*"
 pandas = "*"
 jinja2 = "*"
+flask-wtf = "*"
+email-validator = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"

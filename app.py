@@ -1,16 +1,17 @@
 from flask import Flask, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
-
-
-
+from forms import RegistrationForm, LoginForm
+from flask_wtf.csrf import CSRFProtect
+from os import getenv
 
 app = Flask(__name__)
 Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite3"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 DB = SQLAlchemy(app)
-
+app.config['SECRET_KEY'] = '<SECRET_KEY>'
+csrf = CSRFProtect(app)
 #return app
 
 @app.route('/', methods=['GET'])
@@ -24,6 +25,24 @@ def dropdown():
 @app.route('/predict')
 def results():
     return render_template('BS.html', title='Predict and Listen')
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='Spotify Pick Me - About')
+
+
+@app.route('/register')
+def register():
+    form = RegistrationForm()
+    return render_template('register.html', title='Register', form=form)
+
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
+
+
     
     
 if __name__ == "__main__":
