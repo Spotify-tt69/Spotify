@@ -17,6 +17,20 @@ csrf = CSRFProtect(app)
 @app.route('/', methods=['GET'])
 def dropdown():
     songs = ['one', 'two', 'three', 'four']
+        # <html lang="en">
+        # <head>
+        # <meta charset="UTF-8">
+        # <title>Dropdown</title>
+        # </head>
+        # <body>
+        # <select name= Songs method="GET" action="/">
+        # {% for song in songs%}
+        # <option value= "{{song}}" SELECTED>{{song}}</option>"
+        # {% endfor %}
+        # </select>
+        # </select>
+        # </body>
+        # </html>
     #return 'This is where the main app page will appear'
     return render_template('base.html', songs=songs)
 

@@ -1,19 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 		<head>
-		
+			<style>
+				.TextWrap{float: right; margin: 10px;}
+			</style>
 		</head>
 
 	<head>
 		<link rel="stylesheet" href='/static/bootstrap.css' />
 
-		
-		<title>Paradigm Shift by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -54,98 +49,69 @@
 						
 						<header>
 							<h1>Spotify Pick Me Up</h1>
-							<p>Let us pick some songs to suite you!</p>
+							<h2>Let us pick some songs to suite you!</h2>
 			
 							<div class="container">
 								<div class="row">
 								  <div class="col-sm">
 										<!--Possible Dropdown menu code-->
-									<div class="btn-group" role="group" aria-label="Button group with nested dropdown" align="bottom">
-										<button type="button" class="btn btn-success">Pick A Mood</button>
-										<div class="btn-group" role="group">
-										<button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" 
-										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-										<div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
 									
-											<a class="dropdown-item" href="#">Dropdown link</a>
-											<a class="dropdown-item" href="#">Dropdown link</a>
-										</div>
-										</div>
 									</div>
 								  </div>
 								  <p>
 								  <div class="col-sm">
-									<img src="{{url_for('static', filename='pic02.jpg')}}" width="600" height="400" align="right" />
+									<img src="{{url_for('static', filename='pic02.jpg')}}" width="700" height="450" align="right"/>
 								  </div>
 								  </p>
 								<p>
 								
 								</p>
 						</header>
+							<header>
+								<div class="jumbotron" align="left">
+									<h1 class="display-3">Predictify</h1>
+									<p class="lead"><strong>Predicitify??</strong></p>
+									<p>Try out the new Predictify App!  
+										You select an *item* and you will be given <br> a predicted 
+										playlist to compliment the choice.</p>
+									<p class="lead">
+									  <div class="btn-group" role="group" aria-label="Button group with nested dropdown" align="left">
+										<button type="button" class="btn btn-success">Pick A Mood</button>
+										<div class="btn-group" role="group">
+										<button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" 
+										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+										<div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+											<a class="dropdown-item" href="#">Dropdown link</a>
+											<a class="dropdown-item" href="#">Dropdown link</a>
+										</div>
+										</div>
+									</div>
+								</div>
+									</p>
+								</div>
+							</header>
+						
+						</div>
 							
 							<!--Other drop down code-->
-						<html lang="en">
-							<head>
-							<meta charset="UTF-8">
-							<title>Dropdown</title>
-						</head>
-						<body>
-						<select name= Songs method="GET" action="/">
-							{% for song in songs%}
-							<option value= "{{song}}" SELECTED>{{song}}</option>"
-							{% endfor %}
-						</select>
-
-						</select>
-						</body>
-						</html>
 					
 					</section>
 
 				<!-- Section -->
-					<section id="first">
-						<header>
-							<h2>Predictify</h2>
-						</header>
-							<div>
-								<span class="col-sm"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/DD4D/production/_87935665_thinkstock_headphones.jpg" width="600" height="400" align="right" alt="" /></span>
-							</div>
-							<br>
-						<div class="content">
-							<p><strong>Predicitify??</strong> Try out the new Predictify App!  
-								You select an item from above and you will be given a predicted 
-								playlist to compliment the choice.
-								</p>
-						</div>
-					</section>
-
+					<section id="first"></section>
 				<!-- Section -->
 					<section>
 					
 						<header>
 							
-							<h2>Text</h2>
+							
 						</header>
 						<div class="content">
-							<p><strong>Bold</strong> text text text </p>
-							<div>
-							<span class="col-md"><img src="https://static.fabfitfun.com/magazine/wp-content/uploads/2018/03/14131435/editorial-playlist.jpg" width="600" height="400" align="bottom right" alt="" /></span>
-							</div>
-							<ul class="feature-icons">
-								<li class="icon solid fa-laptop">Consequat tempus</li>
-								<li class="icon solid fa-bolt">Etiam adipiscing</li>
-								<li class="icon solid fa-signal">Libero nullam</li>
-								<li class="icon solid fa-cog">Blandit condimentum</li>
-								<li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
-								<li class="icon solid fa-code">Nibh amet venenatis</li>
-							</ul>
-							<p>Predicify is brought to you by the students in DS20-Unit3 and DS21-Unit4 of Lambda School (</p>
+							<p>Predictify is brought to you by the students in DS20 and DS21 of Lambda School (</p>
 						</div>
 					</section>
-
-
 			</div>
-		{% endblock %}	
+			{% endblock %}
 		<!-- Scripts -->
 			
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
