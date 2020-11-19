@@ -4,7 +4,11 @@ from flask_bootstrap import Bootstrap
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
 from os import getenv
+import pandas as pd
 from joblib import load
+from predict import render_10
+import csv
+import sqlite3
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -13,31 +17,38 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 DB = SQLAlchemy(app)
 app.config['SECRET_KEY'] = '<SECRET_KEY>'
 csrf = CSRFProtect(app)
+#conn = connect("sqlite:///spotify.db")
+#curs = conn.cursor()
+#with open('herokuspotify.csv', 'r') as Spotify_df:
+#df = pandas.read_csv('herokuspotify.csv')
+#df.to_sql(dataset, conn, if_exists='append', index=False)
+
+
 #return app
 
 @app.route('/', methods=['GET'])
 def dropdown():
     songs = ['one', 'two', 'three', 'four']
-        # <html lang="en">
-        # <head>
-        # <meta charset="UTF-8">
-        # <title>Dropdown</title>
-        # </head>
-        # <body>
-        # <select name= Songs method="GET" action="/">
-        # {% for song in songs%}
-        # <option value= "{{song}}" SELECTED>{{song}}</option>"
-        # {% endfor %}
-        # </select>
-        # </select>
-        # </body>
-        # </html>
+      
     #return 'This is where the main app page will appear'
     return render_template('base.html', songs=songs)
 
+#data = pd.read_csv('/herokuspotify.csv')
 
 
-@app.route('/predict')
+# @app.route('/predict', methods=['POST'])
+# def predict():
+    
+    # prediction = render_10(chosen_song)
+
+@app.route('/predict', methods=['GET', 'POST'])
+def home():
+
+    return render_10(request.values['song'])
+
+
+
+
 def results():
     return render_template('BS.html', title='Predict and Listen')
 
