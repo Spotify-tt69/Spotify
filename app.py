@@ -8,8 +8,26 @@ import pandas as pd
 from joblib import load
 from predict import render_10
 import csv
-import sqlite3
 
+# app = Flask(__name__)
+# Bootstrap(app)
+# server = app.server
+# csrf = CSRFProtect(app)
+
+# @app.route('/', methods=['GET'])
+# def dropdown():
+#     songs = ['one', 'two', 'three', 'four']
+      
+#     #return 'This is where the main app page will appear'
+#     return render_template('base.html', songs=songs)
+
+# #data = pd.read_csv('/herokuspotify.csv')
+
+
+# # @app.route('/predict', methods=['POST'])
+# # def predict():
+    
+#     # prediction = render_10(chosen_song)
 
 def create_app():
     app = Flask(__name__)
@@ -69,4 +87,8 @@ def create_app():
     
     
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run_server(debug=True)   
+=======
+    app.run_server(debug=True)   
+>>>>>>> 9440031ee4a156e6c2a1d9b052d9dcbf1e848e11
