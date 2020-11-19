@@ -4,6 +4,7 @@ from flask_bootstrap import Bootstrap
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
 from os import getenv
+from joblib import load
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -55,6 +56,10 @@ def register():
 def login():
     form = LoginForm()
     return render_template('login.html', title='Login', form=form)
+
+@app.route('/process')
+def process():
+    return render_template('process.html', title='Our Process in Creating Predictify')
 
 
     
