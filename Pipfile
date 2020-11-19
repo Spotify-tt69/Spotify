@@ -17,6 +17,7 @@ python-dotenv = "*"
 joblib = "*"
 jupyterlab = "*"
 scikit-learn = "0.22.2"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
