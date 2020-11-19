@@ -11,10 +11,7 @@ import csv
 
 app = Flask(__name__)
 Bootstrap(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite3"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-DB = SQLAlchemy(app)
-app.config['SECRET_KEY'] = '<SECRET_KEY>'
+server = app.server
 csrf = CSRFProtect(app)
 
 @app.route('/', methods=['GET'])
