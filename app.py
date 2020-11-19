@@ -85,10 +85,5 @@ def create_app():
 
     return app
     
-    
 if __name__ == "__main__":
-<<<<<<< HEAD
-    app.run_server(debug=True)   
-=======
-    app.run_server(debug=True)   
->>>>>>> 9440031ee4a156e6c2a1d9b052d9dcbf1e848e11
+    app.run_server(debug=True)
