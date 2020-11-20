@@ -32,8 +32,9 @@ def create_app():
 
     @app.route('/predict', methods=['GET', 'POST'])
     def home():
-
-        return render_10(request.values['song'])
+        template = render_template('predict.html', title= 'Your New Playlist')
+        songs = render_10(request.values['song'])
+        return (songs, template)
 
     def results():
         return render_template('BS.html', title='Predict and Listen')
