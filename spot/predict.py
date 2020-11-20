@@ -1,7 +1,8 @@
-from joblib import load
+# from joblib import load
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
+import numpy as np
 
 
 df = pd.read_csv('herokuspotify.csv')
@@ -29,4 +30,5 @@ def render_10(song_title):
     arr = nn.kneighbors(input_row.reshape(1, -1))
     index_value = arr[1][0][1:11]
     songs_rec = df['track_name'].iloc[index_value] + " By: " + df['artist'].iloc[index_value]
-    return str(songs_rec)
+
+    return songs_rec

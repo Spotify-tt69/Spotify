@@ -25,7 +25,7 @@ def create_app():
     @app.route('/', methods=['GET'])
     def dropdown():
         
-        #return 'This is where the main app page will appear'
+       
         return render_template('base.html')
 
   
@@ -34,9 +34,6 @@ def create_app():
     def home():
 
         return render_10(request.values['song'])
-
-
-
 
     def results():
         return render_template('BS.html', title='Predict and Listen')
