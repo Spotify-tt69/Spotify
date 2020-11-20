@@ -25,7 +25,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Authors and Acknowledgment
-API Engineering: Victoria Debebe, Henry Mead, Drew Bordelon
+API Engineering/Front-End Engineering: Victoria Debebe, Henry Mead, Drew Bordelon
 
 Data Modeling: Lucas Petrus, Josiah McKinney
 
