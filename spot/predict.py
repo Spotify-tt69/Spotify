@@ -53,7 +53,6 @@ def render_10(song_title):
         songs_arr = songs_db.to_numpy()
         songs_rec = songs_arr.tolist()
 
-
         return str(songs_rec)
         
     else:
