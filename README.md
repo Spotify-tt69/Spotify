@@ -10,7 +10,7 @@ original song chosen by the user.
 ## Endpoint
 
 Our organization(TT-69) deployed a Heroku App that can be found 
-[here](https://predictifyforspotify.herokuapp.com/).
+[here] (https://predictifyforspotify.herokuapp.com/).
 
 
 ## Data
