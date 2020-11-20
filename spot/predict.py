@@ -48,12 +48,13 @@ def render_10(song_title):
         input_row = s.transform(input_row)
         arr = nn.kneighbors(input_row.reshape(1, -1))
         index_value = arr[1][0]#[1]
-        songs_list = df['track_name'].iloc[index_value] + " by " + df['artist'].iloc[index_value]
-        songs_db = pd.DataFrame(data=songs_list).reset_index().drop('index', axis=1)
-        songs_arr = songs_db.to_numpy()
-        songs_rec = songs_arr.tolist()
-
+        songs_rec = df['track_name'].iloc[index_value] + " by " + df['artist'].iloc[index_value]
+        # songs_df = (pd.DataFrame(data=songs_list).reset_index().drop('index', axis=1))
+        # songs_arr = songs_df.to_numpy()
+        # songs_rec = songs_arr.tolist()
+        # for value in songs_rec:
+        #     for i in value:
+        #         return end='i'
         return str(songs_rec)
-        
     else:
         return "Song Not in Database. Spelling/Spacing Common Issues"
