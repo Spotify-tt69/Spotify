@@ -1,5 +1,4 @@
 # Spotify Song Suggestor Application
-Build Week November 16-20, 2020
 
 This API created by Lambda Students uses an K-Nearest Neighbors algorithm that anaylzed
 our numerical features, which include categories such as danceability, loudness, tempo, etc.
